@@ -1,0 +1,28 @@
+<html>
+<head>
+<style>
+  body{
+    background: url(test.jpg);
+    width: 100%;
+    height: 10000px;
+    background-attachment: fixed;
+  }
+</style>
+</head>
+<body id="body" class="gifotrope"></body>
+<div class="gifotrope"></div>
+<script type="text/javascript">
+  window.onscroll = function(){
+    var width = 500;
+    var div = 30;
+
+    var doc = document.documentElement;
+    var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+    var elems = document.querySelectorAll('.gifotrope');
+    [].slice.call(elems).forEach(function(elem){
+      elem.style.backgroundPositionX = width * Math.floor((top % width) / div) + 'px';
+    });
+
+  }
+</script>
+<html>
