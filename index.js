@@ -21,7 +21,7 @@ exec('mkdir ' +rand +'; cp ' + imagePath + ' ' + rand + '; cd ' + rand + '; gif2
     appending.forEach(function(file){
       strip.append(file);
     });
-    var theFile =  './' + rand + '/' + rand + '.jpg';
+    var theFile =  './' + rand + '/' + rand + '-' + files.length + '.png';
     strip.write(theFile, function(err){
       console.log(theFile);
       allFiles.map(addRand).map(fs.unlink);
