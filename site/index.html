@@ -7,14 +7,26 @@
     height: 10000px;
     background-attachment: fixed;
   }
+  .another{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 500px;
+    height: 500px;
+    background: url(assets/test-11.jpg);
+    background-size: cover;
+  }
 </style>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript" src="gifotrope.js"></script>
 </head>
-<body id="body" class="gifotrope"></body>
+<body id="body" class="gifotrope">
+  <div class="another gifotrope"></div>
+</body>
 <script type="text/javascript">
   $(function(){
       $('.gifotrope').gifotrope();
   });
 </script>
+
 <html>
