@@ -41,7 +41,7 @@
           image = matches[1].replace(/["']/g, '');
         }
       }
-      if(!image) return console.log("gifotrope: couldn't find image");
+      if(!image) return;
 
       var imageIndex = imagesWithStyles.indexOf(image);
       if(imageIndex < 0){
@@ -53,7 +53,7 @@
             frames = matches[1];
           }
           frames = parseInt(frames, 10);
-          if(!frames) return console.log("gifotrope: couldn't determine frames");
+          if(!frames) return;
 
           var frameRange = [];
           var z = 0;

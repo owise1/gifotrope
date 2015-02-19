@@ -1,31 +1,66 @@
 <html>
 <head>
 <style>
+  .moving{
+    opacity: 1;
+  }
   body{
     background: url(assets/dots-14.png);
     width: 100%;
     height: 10000px;
     background-attachment: fixed;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
   }
   .another{
+    display: none;
     position: fixed;
-    top: 20px;
-    left: 20px;
+    top: 50vh;
+    left: 50%;
     width: 500px;
     height: 500px;
-    background: url(assets/test-11.jpg);
+    margin-left: -250px;
+    margin-top: -250px;
+    background: url(assets/test-11.png);
     background-size: cover;
+    opacity: 0;
+  }
+  .and-these{
+    background: url(assets/84026-9.png);
+    width: 100%;
+    height: 50px;
+    position: fixed;
+  }
+
+  .and-these.yeah{
+    bottom: 0;
+  }
+  .and-these.oh{
+    top: 0;
+    width: 50px;
+    height: 100vh;
+  }
+  .and-these.oh.no{
+    right: 0;
   }
 </style>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript" src="gifotrope.js"></script>
 </head>
-<body id="body" class="gifotrope">
-  <div class="another gifotrope"></div>
+<body id="body" >
+  <div class="another"></div>
+  <div class="and-these"></div>
+  <div class="oh and-these"></div>
+  <div class="oh no and-these"></div>
+  <div class="yeah and-these"></div>
+  <h1>gifotrope</h1>
 </body>
 <script type="text/javascript">
   $(function(){
-      $('.gifotrope').gifotrope();
+      $('*').gifotrope();
   });
 </script>
 
