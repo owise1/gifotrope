@@ -1,1 +1,118 @@
-test
+<html>
+<head>
+<style>
+  body{
+    width: 100%;
+    height: 15500px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+  body > *{
+    opacity: 0;
+    transition: 0.5s opacity;
+  }
+  body .stuff{
+    z-index: 1000;
+    position: relative;
+    opacity: 1;
+  }
+  body > .gifotrope-moving{
+    opacity: 1;
+  }
+  h1{
+    padding: 100px 0 0 0;
+    text-align: center;
+  }
+</style>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="gifotrope.js"></script>
+</head>
+<body id="body" >
+  <style type="text/css">
+    .kitteh{
+      background: url(assets/32-28.png);
+      background: url(assets/dots-14.png);
+      background-attachment: fixed;
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+  </style>
+  <div class="kitteh"></div>
+
+  <style type="text/css">
+    .and-these{
+      background: url(assets/84026-9.png);
+      width: 100%;
+      height: 50px;
+      position: fixed;
+      z-index: 4;
+    }
+    .and-these.yeah{
+      bottom: 0;
+    }
+    .and-these.oh{
+      top: 0;
+      width: 50px;
+      height: 100vh;
+    }
+    .and-these.oh.no{
+      right: 0;
+    }
+  </style>
+  <div class="and-these"></div>
+  <div class="oh and-these"></div>
+  <div class="oh no and-these"></div>
+  <div class="yeah and-these"></div>
+
+  <style type="text/css">
+    .blow{
+      background: url(assets/mindblown-193.png);
+      z-index: 5;
+      position: fixed;
+      top: 50vh;
+      height: 210px;
+      width: 315px;
+      left: 50%;
+      margin-left: -157px;
+      margin-top: -157px;
+    }
+  </style>
+  <div class="blow"></div>
+
+  <div class="stuff">
+    <h1>
+      gifotrope<br/>
+      &darr;
+    </h1>
+  </div>
+
+  <style type="text/css">
+    #footer{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      text-align: center;
+      z-index: 1000;
+      opacity: 1;
+      width: 100%;
+      padding-bottom: 50px;
+    }
+  </style>
+  <div id="footer">
+    <p>
+    <a href="http://github.com/owise1/gifotrope">github.com/owise1/gifotrope</a>
+    </p>
+  </div>
+</body>
+<script type="text/javascript">
+  $(function(){
+      $('*').gifotrope();
+  });
+</script>
+
+<html>
