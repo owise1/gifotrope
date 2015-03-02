@@ -1,6 +1,6 @@
 {
   "name": "gifotrope",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "take control of your animated gifs",
   "main": "index.js",
   "scripts": {
