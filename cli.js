@@ -19,7 +19,7 @@ fs.stat(imagePath, function(err, stat){
                .map(function(f){  doGif(imagePath + f); });
     });
   } else {
-    doGif(imagePath);
+    doGif(__dirname + '/' + imagePath);
   }
 });
 

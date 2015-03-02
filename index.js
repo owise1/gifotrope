@@ -9,7 +9,7 @@ module.exports = function(imagePath, cb){
   var addRand   = function(f){ return rand + '/' + f; };
 
   fs.mkdir(rand, function(err, ok){
-    exec('cp ' + imagePath + ' ' + __dirname + '/' + rand + '; cd ' + rand + '; gif2anim -c ' + path.basename(imagePath), function(error, stdout, stderr) {
+    exec('cp ' + imagePath + ' ' + __dirname + '/' + rand + '; cd ' + __dirname + '/' + rand + '; gif2anim -c ' + path.basename(imagePath), function(error, stdout, stderr) {
       if (error !== null) {
           return console.log('exec error: ' + error);
       }
@@ -19,7 +19,7 @@ module.exports = function(imagePath, cb){
         var files = allFiles.filter(function(f){ return /_/.test(f); }).sort().map(addRand);
         var appending = files.slice(1);
         appending.push(true);
-        var strip = gm(files[0]);
+        var strip = gm(files[0]).options({imageMagick: true});
         appending.forEach(function(file){
           strip.append(file);
         });

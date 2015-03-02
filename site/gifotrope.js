@@ -78,12 +78,18 @@
               addRule('.' + myClass + '.f-' + z, "background-position-x: "+width*z+"px");
             });
           }
+          var _tout;
           $(window).scroll(function(){
             var f = Math.floor($(window).scrollTop() / opts.slow) % frames;
+            if(_tout) clearTimeout(_tout);
             if(f < 0) return;
             $('.' + myClass)
+              .addClass('gifotrope-moving')
               .removeClass(frameRange.map(function(z){ return 'f-' + z; }).join(' '))
               .addClass('f-' + f);
+            _tout = setTimeout(function(){
+              $('.' + myClass).removeClass('gifotrope-moving');
+            }, 100);
           });
       }
       
