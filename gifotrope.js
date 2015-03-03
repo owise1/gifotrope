@@ -83,7 +83,7 @@
           // on scroll update class
           var _tout;
           $(window).scroll(function(){
-            var f = Math.floor(-$(window).scrollTop() / opts.slow) % frames;
+            var f = Math.floor($(window).scrollTop() / opts.slow) % frames;
             if(_tout) clearTimeout(_tout);
             if(f < 0) return;
             $('.' + myClass)
