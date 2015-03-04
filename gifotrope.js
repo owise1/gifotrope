@@ -76,7 +76,7 @@
             width  = this.width / frames;
 
             frameRange.forEach(function(z){
-              addRule('.' + myClass + '.f-' + z, "background-position-x: "+width*z+"px");
+              addRule('.' + myClass + '.f-' + z, "background-position-x: "+(width - width*z)+"px");
             });
           }
 
