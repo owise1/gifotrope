@@ -1,0 +1,21 @@
+{
+  "name": "gifotrope",
+  "main": "gifotrope.js",
+  "version": "0.0.5",
+  "homepage": "https://github.com/owise1/gifotrope",
+  "authors": [
+    "@owise1"
+  ],
+  "description": "take control of your gifs",
+  "keywords": [
+    "gifs"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

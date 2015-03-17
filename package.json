@@ -1,6 +1,6 @@
 {
   "name": "gifotrope",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "take control of your animated gifs",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,8 @@
     "url" : "git://github.com/owise1/gifotrope.git"
   },
   "bin" :{
-    "gif2anim" : "./gif2anim.sh"
+    "gif2anim" : "./gif2anim",
+    "gifotrope" : "./cli.js"
   },
   "author": "@owise1",
   "license": "ISC",
